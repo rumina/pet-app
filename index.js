@@ -1,4 +1,4 @@
-function addBox(parentId, nameClass, defaultValue) { 
+function addListItem(parentId, nameClass, defaultValue) { 
   const liId = 'li-' + document.getElementById(parentId).childElementCount;
   const newLi = createLi(liId);
   const newTextInput = createTextInput(nameClass,defaultValue);
@@ -44,9 +44,9 @@ function removeBox(id) {
   document.getElementById(id).remove();
 }
 
-function initialBox(parentId, nameClass, repeat) { 
+function initialListItem(parentId, nameClass, repeat) { 
   for (let i = 0; i < repeat; i++) {
-    addBox(parentId, nameClass, i + 1);
+    addListItem(parentId, nameClass, i + 1);
   }
 }
 
