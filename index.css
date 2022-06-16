@@ -1,3 +1,7 @@
 ul {
 	list-style-type: none;
 }
+
+p span {
+	font-weight: bold;
+}
