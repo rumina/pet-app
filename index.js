@@ -74,6 +74,7 @@ function createParagraph(resultHistoryList) {
   const newSpanRandomValue = createNewSpan(resultHistoryList.randomValue);
   newParagraph.append("For the inputs:");
   newParagraph.appendChild(newSpanDetailBox);
+  newParagraph.append(" ");
   newParagraph.append("the random result is: ");
   newParagraph.appendChild(newSpanRandomValue);
   return newParagraph;
