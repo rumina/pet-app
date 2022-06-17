@@ -70,24 +70,19 @@ function showItemHistoryList(resultHistoryList, parentHistoryListId) {
 
 function createParagraph(resultHistoryList) { 
   const newParagraph = document.createElement("p");
-  const newSpanDetailBox = createNewSpan(resultHistoryList.detailBox);
+  const newSpanDetailBox = createNewSpan(resultHistoryList.detailBox.join(","));
   const newSpanRandomValue = createNewSpan(resultHistoryList.randomValue);
-  newParagraph.append("For the inputs:");
+  newParagraph.appendChild(document.createTextNode("For the inputs:"));
   newParagraph.appendChild(newSpanDetailBox);
-  newParagraph.append(" ");
-  newParagraph.append("the random result is: ");
+  newParagraph.appendChild(document.createTextNode(" "));
+  newParagraph.appendChild(document.createTextNode("the random result is: "));
   newParagraph.appendChild(newSpanRandomValue);
   return newParagraph;
 }
 
 function createNewSpan(data) { 
   const newSpan = document.createElement("span");
-  if (data.isArray) {
-    newSpan.append(data.join(","));
-  }
-  else { 
-    newSpan.append(data);
-  }
+  newSpan.appendChild(document.createTextNode(data));
   return newSpan;
 }
 
